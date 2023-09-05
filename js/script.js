@@ -35,7 +35,7 @@ tabsParent.addEventListener("click", function (event) {
 
 // Timer
 
-const deadLine = "2023-09-05";
+const deadLine = "2023-12-31";
 
 function getTime(endTime) {
   let days, hours, minutes, seconds;
@@ -202,7 +202,7 @@ const getCard = async (url) => {
 };
 getCard("http://localhost:3000/menu").then((data) => {
   data.forEach((obj) => {
-    createCard(obj.img,obj.altimg,obj.title,obj.descr,obj.price)
+    createCard(obj.img, obj.altimg, obj.title, obj.descr, obj.price);
   });
 });
 
@@ -221,3 +221,38 @@ function createCard(img, altimg, title, descr, price) {
     `;
   document.querySelector(".menu .container").append(element);
 }
+
+// Slider
+
+    const current = document.querySelector("#current"),
+    prev = document.querySelector(".offer__slider-prev"),
+    next = document.querySelector(".offer__slider-next")
+    let count = 1;
+    const pictures = document.querySelectorAll('.offer__slide')
+    pictures.forEach(item => item.style.display = 'none')
+    pictures[count - 1].style.display = 'block'
+
+
+  function prevCount() {
+    pictures.forEach(item => item.style.display = 'none')
+    if(count < 2){
+      count = 4
+      }
+      else{
+      count--;} 
+      current.textContent = `0${count}`
+      pictures[count - 1].style.display = 'block' 
+  }
+  function nextCount() {
+    pictures.forEach(item => item.style.display = 'none')
+    if(count > 3 ){
+      count = 1
+    }
+      else{
+        count++;
+      } 
+      current.textContent = `0${count}`
+        pictures[count - 1].style.display = 'block' 
+  }
+  prev.addEventListener("click", prevCount);
+  next.addEventListener("click", nextCount);
