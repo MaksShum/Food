@@ -33,4 +33,4 @@ prev.addEventListener("click", prevCount);
 next.addEventListener("click", nextCount);
 }
 
-module.exports = slider
+export default slider

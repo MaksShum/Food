@@ -1,13 +1,13 @@
-const calculating = require("./modules/calculating"),
-  menu_on_day = require("./modules/menu_on_day"),
-  modal = require("./modules/modal"),
-  request = require("./modules/request"),
-  slider = require("./modules/slider"),
-  tabs = require("./modules/tabs"),
-  timer = require("./modules/timer");
+  import calculating from "./modules/calculating";
+  import menuOnDay from "./modules/menu_on_day";
+  import modal from "./modules/modal";
+  import request from "./modules/request";
+  import slider from "./modules/slider";
+  import tabs from "./modules/tabs";
+  import timer from "./modules/timer"
 
 calculating();
-menu_on_day();
+menuOnDay();
 modal();
 request();
 slider();

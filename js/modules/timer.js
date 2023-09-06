@@ -59,4 +59,4 @@ function timer(selector, endtime) {
 timer(".timer", deadLine);
 }
 
-module.exports = timer
+export default timer

@@ -1,19 +1,22 @@
+function modalOpen() {
+  document.querySelector('.modal').style.display = "block";
+  document.body.style.overflow = "hidden";
+  clearInterval(timerModalOpen);
+  }
+  function modalClose() {
+    document.querySelector('.modal').style.display = "none";
+  document.body.style.overflow = "";
+  }
+  const timerModalOpen = setTimeout(modalOpen, 15000);
+window.addEventListener("scroll", scroll);
 function modals() {
     // Modal
 
 const openModal = document.querySelectorAll(".modalOpen"),
-closeModal = document.querySelector(".modalClose");
+closeModal = document.querySelector(".modalClose"),
 modal = document.querySelector(".modal");
 
-function modalOpen() {
-modal.style.display = "block";
-document.body.style.overflow = "hidden";
-clearInterval(timerModalOpen);
-}
-function modalClose() {
-modal.style.display = "none";
-document.body.style.overflow = "";
-}
+
 
 openModal[0].addEventListener("click", modalOpen);
 openModal[1].addEventListener("click", modalOpen);
@@ -23,7 +26,7 @@ if (e.target === modal) {
   modalClose();
 }
 });
-document.addEventListener("keydown", (e) => {
+modal.addEventListener("keydown", (e) => {
 if (e.code === "Escape") {
   modalClose();
 }
@@ -43,4 +46,5 @@ window.addEventListener("scroll", scroll);
 }
 
 
-module.exports = modals
+export default modals
+export {modalClose}

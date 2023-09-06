@@ -87,4 +87,4 @@ const size = document.querySelectorAll(
   
 }
 
-module.exports = calculating
+export default calculating

@@ -1,3 +1,5 @@
+
+
 function menuOnDay(){
     // Menu on day
 
@@ -30,4 +32,4 @@ const getCard = async (url) => {
   
 }
 
-module.exports = menuOnDay
+export default menuOnDay

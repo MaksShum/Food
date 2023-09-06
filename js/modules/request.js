@@ -1,3 +1,5 @@
+import { modalClose } from "./modal";
+
 function request(){
     // Request
 
@@ -7,7 +9,7 @@ let reqButton = document.querySelector(".req");
 if (inName.value || inPhone.value) {
 reqButton.setAttribute(disabled, true);
 }
-modal.addEventListener("click", (e) => {
+document.querySelector('.modal').addEventListener("click", (e) => {
 if (e.target.classList.contains("modal__close")) {
   modalClose();
 }
@@ -61,4 +63,4 @@ if (!inName.value || !inPhone.value) {
 
 }
 
-module.exports = request
+export default request
