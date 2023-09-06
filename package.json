@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7",
     "json-server": "^0.17.3"
   }
 }
